@@ -29,7 +29,7 @@ app.get("*", (_, res) => {
   res.send("Invalid route");
 });
 
-app.listen(4000, (err) => {
+app.listen(process.env.PORT ?? 4000, (err) => {
   if (err) {
     console.log("err: ", err);
     throw Error(err);
